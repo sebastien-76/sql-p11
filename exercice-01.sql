@@ -50,7 +50,7 @@ WHERE email LIKE '%.com';
 -- Écrivez la requête qui permet de lister les students dont la date de création est antérieure au 10 janvier 2021 inclus
 SELECT * 
 FROM `student` 
-WHERE created_at < '2021-01-12 00:00:00';
+WHERE created_at <= '2021-01-11 00:00:00';
 
 -- Exo 1.9
 -- Écrivez la requête qui permet de lister les projects dont la description ne contient pas la chaîne de caractères `Dolores`
@@ -71,9 +71,10 @@ SELECT *
 FROM `student`
 WHERE project_id IS NOT NULL;
 
-
-
 -- Exo 1.12
 -- Écrivez la requête qui permet de lister les students n'ayant pas de project
 -- Note : les students sans project ont une colonne `project_id` qui est nulle
+SELECT *
+FROM `student`
+WHERE project_id IS NOT NULL;
 
