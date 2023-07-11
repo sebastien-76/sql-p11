@@ -76,5 +76,5 @@ WHERE project_id IS NOT NULL;
 -- Note : les students sans project ont une colonne `project_id` qui est nulle
 SELECT *
 FROM `student`
-WHERE project_id IS NOT NULL;
+WHERE project_id IS NULL;
 
